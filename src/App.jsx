@@ -1,14 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import SearchBar from './components/SearchBar';
-import { Search,  SearchResults} from './layouts';
+import { Search } from './layouts';
+import { Home, SearchResults, ProductDetail } from './views';
 
 function App() {
   return (
     <Router>
-      <SearchBar />
       <Routes>
-        <Route path="/" element={<Search />} />
-        <Route path="/search" element={<SearchResults />} />
+        <Route path="/" element={<Search />} >
+          <Route index element={<Home />} />
+          <Route path="/search" element={<SearchResults />} />
+          <Route path="/detail" element={<ProductDetail />} />
+
+        </Route>
       </Routes>
     </Router>
   );
