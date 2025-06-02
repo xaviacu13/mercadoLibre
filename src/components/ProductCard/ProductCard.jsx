@@ -1,11 +1,32 @@
-import { Typography } from '@mui/material';
+import { ImageContent, ProductResume } from "./components";
+import { Root } from "./styles";
+import { Link } from "react-router-dom";
 
-const ProductCard = () => {
-
+const ProductCard = ({
+  id,
+  title,
+  img,
+  price,
+  oldPrice,
+  seller,
+  installments,
+  shipping,
+}) => {
   return (
-    <div style={{ marginTop: '80px', padding: '20px' }}>
-      <Typography variant='h1' color='primary'>Detalle del Producto</Typography>
-    </div>
+    <Link to={`/detail?query=${id}`} style={{ textDecoration: 'none' }}>
+      <Root>
+        <ImageContent img={img} />
+        <ProductResume
+          id={id}
+          title={title}
+          seller={seller}
+          price={price}
+          oldPrice={oldPrice}
+          installments={installments}
+          shipping={shipping}
+        />
+      </Root>
+    </Link>
   );
 };
 

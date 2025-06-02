@@ -1,4 +1,5 @@
 import { colors } from '@mui/material'
+import { lightGreen } from '@mui/material/colors'
 
 const white = '#FFF'
 const black = '#000'
@@ -20,9 +21,12 @@ export default {
     light: colors.red[400],
   },
   text: {
-    primary: "rgba(0, 0, 0, 0.55)",
-    secondary: colors.blueGrey[600],
+    primary: "rgba(0, 0, 0, 0.9)",
+    secondary: "rgba(0, 0, 0, 0.55)",
     link: colors.blue[600],
+    green: " #007337",
+    lightGreen: "#00A650",
+    disabled: "rgba(0, 0, 0, 0.38)",
   },
   link: colors.blue[800],
   icon: colors.blueGrey[600],
