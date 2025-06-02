@@ -1,44 +1,45 @@
-import palette from './palette'
+import palette from './palette';
 
 export default {
+  fontFamily: ['Proxima Nova', 'Roboto', 'Montserrat', '-apple-system', 'sans-serif'].join(','),
   h1: {
     color: palette.text.primary,
-    fontWeight: 500,
-    fontSize: '35px',
+    fontWeight: 400,
+    fontSize: '24px',
     letterSpacing: '-0.24px',
     lineHeight: '40px',
   },
   h2: {
-    color: palette.text.primary,
-    fontWeight: 500,
-    fontSize: '29px',
+    color: palette.text.secondary,
+    fontWeight: 300,
+    fontSize: '20px',
     letterSpacing: '-0.24px',
     lineHeight: '32px',
   },
   h3: {
-    color: palette.text.primary,
-    fontWeight: 500,
-    fontSize: '24px',
+    color: palette.text.secondary,
+    fontWeight: 400,
+    fontSize: '14px',
     letterSpacing: '-0.06px',
     lineHeight: '28px',
   },
   h4: {
-    color: palette.text.primary,
-    fontWeight: 500,
-    fontSize: '20px',
+    color: palette.text.lightGreen,
+    fontWeight: 400,
+    fontSize: '14px',
     letterSpacing: '-0.06px',
     lineHeight: '24px',
   },
   h5: {
-    color: palette.text.primary,
-    fontWeight: 500,
-    fontSize: '16px',
+    color: palette.text.lightGreen,
+    fontWeight: 300,
+    fontSize: '14px',
     letterSpacing: '-0.05px',
     lineHeight: '20px',
   },
   h6: {
-    color: palette.text.primary,
-    fontWeight: 500,
+    color: palette.text.secondary,
+    fontWeight: 400,
     fontSize: '14px',
     letterSpacing: '-0.05px',
     lineHeight: '20px',
@@ -84,7 +85,5 @@ export default {
     fontWeight: 500,
     letterSpacing: '0.33px',
     lineHeight: '13px',
-    // textTransform: 'uppercase',
   },
-  fontFamily: ['Roboto', 'Montserrat', '-apple-system'].join(','),
-}
+};

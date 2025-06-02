@@ -1,0 +1,4 @@
+export {default as NavigationBar} from './NavigationBar'
+export {default as CarouselImg} from './CarouselImg'
+export {default as ProductInfo} from './ProductInfo'
+export {default as ImageSelected} from './ImageSeleted'

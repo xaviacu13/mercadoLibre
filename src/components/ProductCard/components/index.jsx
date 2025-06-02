@@ -1,2 +1,2 @@
-export { default as Resume } from './Resume'
-export { default as ImageContent } from './ImageContent'
+export { default as ProductResume } from './ProductResume'
+export { default as ImageContent } from './ProductImage'
