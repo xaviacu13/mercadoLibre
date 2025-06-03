@@ -1,7 +1,8 @@
 import palette from './palette';
 
 export default {
-  fontFamily: ['Proxima Nova', 'Roboto', 'Montserrat', '-apple-system', 'sans-serif'].join(','),
+  // fontFamily: ['Proxima Nova', 'Roboto', 'Montserrat', '-apple-system', 'sans-serif'].join(','),
+  fontFamily: ['Roboto', 'Montserrat', '-apple-system', 'sans-serif'].join(','),
   h1: {
     color: palette.text.primary,
     fontWeight: 400,
@@ -44,6 +45,13 @@ export default {
     letterSpacing: '-0.05px',
     lineHeight: '20px',
   },
+  p: {
+    color: palette.text.secondary,
+    fontWeight: 400,
+    fontSize: '18px',
+    letterSpacing: '-0.05px',
+    lineHeight: '20px',
+  },
   subtitle1: {
     color: palette.text.primary,
     fontSize: '16px',
@@ -65,9 +73,10 @@ export default {
   },
   body2: {
     color: palette.text.secondary,
-    fontSize: '12px',
-    letterSpacing: '-0.04px',
-    lineHeight: '18px',
+    fontWeight: 400,
+    fontSize: '14px',
+    letterSpacing: '-0.05px',
+    lineHeight: '20px',
   },
   button: {
     color: palette.text.primary,

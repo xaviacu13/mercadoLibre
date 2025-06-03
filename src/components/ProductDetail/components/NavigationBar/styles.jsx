@@ -1,16 +1,22 @@
+import { Typography } from '@mui/material';
 import styled from '@emotion/styled';
 
-export const Root = styled('div')(() => ({
+export const Root = styled('div')(({ theme }) => ({
   display: 'flex',
   justifyContent: 'space-between',
   width: '99%',
+  marginTop: '55px',
   padding: '10px 20px',
-  backgroundColor: '#fff',
-  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-  borderRadius: '8px',
-  '@media (max-width: 600px)': {
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: '10px',
+  backgroundColor: theme.palette.background.default,
+  [theme.breakpoints.down('md')]: {
+    marginTop: '85px',
+    justifyContent: 'space-around',
+  },
+
+}));
+
+export const BreadcrumbsText = styled(Typography)(({ theme }) => ({
+  [theme.breakpoints.down('md')]: {
+    display: 'none',
   },
 }));

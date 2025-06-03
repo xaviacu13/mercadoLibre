@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import logoMeli from '../../assets/images/logo_meli.png';
-import iconSearch from '../../assets/icons/search_icon.png';
+import React, { useState } from "react";
+import { Link, useNavigate } from 'react-router-dom';
+import logoMeli from "../../assets/images/logo_meli.png";
+import iconSearch from "../../assets/icons/search_icon.png";
 
 import {
   Root,
@@ -10,10 +10,10 @@ import {
   Input,
   SearchIcon,
   Divider,
-} from './styles';
+} from "./styles";
 
 const SearchBar = () => {
-  const [product, setProduct] = useState('');
+  const [product, setProduct] = useState("");
   const navigate = useNavigate();
 
   const handleInputChange = (e) => {
@@ -22,21 +22,23 @@ const SearchBar = () => {
 
   const onSearch = () => {
     const trimmed = product.trim();
-    if (trimmed === '') return;
+    if (trimmed === "") return;
 
     navigate(`/search?query=${encodeURIComponent(trimmed)}`);
-    setProduct('');
+    setProduct("");
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       onSearch();
     }
   };
 
   return (
     <Root>
-      <Logo src={logoMeli} alt="Logo Mercado Libre" />
+      <Link to="/">
+        <Logo src={logoMeli} alt="Logo Mercado Libre" />
+      </Link>
       <SearchBarContainer>
         <Input
           type="text"
@@ -46,11 +48,7 @@ const SearchBar = () => {
           onKeyDown={handleKeyDown}
         />
         <Divider />
-        <SearchIcon
-          src={iconSearch}
-          alt="Buscar"
-          onClick={onSearch}
-        />
+        <SearchIcon src={iconSearch} alt="Buscar" onClick={onSearch} />
       </SearchBarContainer>
     </Root>
   );

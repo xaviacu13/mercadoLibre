@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
+import palette from '../../theme/palette';
 
 export const Root = styled('div')(({ theme }) => ({
-  position: 'fixed',
+  position: 'absolute',
   top: 0,
   left: 0,
   width: '100%',
@@ -9,14 +10,14 @@ export const Root = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
   padding: '8px',
-  backgroundColor: theme.palette.background.default,
+  backgroundColor: theme.palette.background.header,
   boxShadow: 'theme.shadows[1]',
   gap: '35px',
 
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     flexDirection: 'column',
     alignItems: 'flex-cencter',
-    padding: '0.5rem 1rem',
+    justifyContent: 'center',
     gap: '0.5rem',
   },
 }));
@@ -30,7 +31,7 @@ export const Logo = styled('img')({
 export const SearchBarContainer = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
-  backgroundColor: '#fff',
+  backgroundColor: palette.white,
   padding: '0.5rem 1rem',
   borderRadius: '4px',
   boxShadow: theme.shadows[1],
@@ -38,6 +39,9 @@ export const SearchBarContainer = styled('div')(({ theme }) => ({
   maxWidth: '1018px',
   width: '100%',  
   height: '35px',
+  [theme.breakpoints.down('md')]: {
+    width: '80%',
+  },
 }));  
 
 export const Input = styled('input')(({ theme }) => ({
@@ -50,7 +54,6 @@ export const Input = styled('input')(({ theme }) => ({
   fontSize: '16px',
   fontWeight: '400',
   color: theme.palette.text.secondary,
-  fontFamily: 'Proxima, Nova',  
 }));
 
 export const SearchIcon = styled('img')({
