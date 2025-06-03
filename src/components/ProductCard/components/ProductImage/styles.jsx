@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 
-export const Root = styled('div')(() => ({
+export const Root = styled('div')(({ theme }) => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   width: '250px',
-  backgroundColor: '#f0f0f0',
+  backgroundColor: theme.palette.background.paper,
   borderRadius: '8px',
 }));
 export const Img = styled('img')(() => ({

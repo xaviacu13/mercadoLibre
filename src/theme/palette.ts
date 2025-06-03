@@ -26,13 +26,14 @@ export default {
     link: colors.blue[600],
     green: " #007337",
     lightGreen: "#00A650",
-    disabled: "rgba(0, 0, 0, 0.38)",
+    disabled: "rgba(0, 0, 0, 0.8)",
   },
   link: colors.blue[800],
   icon: colors.blueGrey[600],
   background: {
-    default: '#ffe600',
-    paper: "#ebebeb",
+    default: "#ebebeb",
+    paper: white,
+    header: '#ffe600',
   },
-  divider: colors.grey[200],
+  divider: colors.grey[300],
 }

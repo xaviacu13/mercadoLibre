@@ -12,7 +12,7 @@ const ProductResume = ({
   return (
     <Root>
       <div>
-        <Typography variant="h2">{title}</Typography>
+        <Typography variant="h1">{title}</Typography>
         <Typography variant="h3">Por: {seller}</Typography>
       </div>
       <div>

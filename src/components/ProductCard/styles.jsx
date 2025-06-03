@@ -1,34 +1,32 @@
 import styled from '@emotion/styled';
 
-export const Root = styled('div')(() => ({
+export const Root = styled('div')(({ theme }) => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'row',
-   width: '100%',
+  width: '100%',
   maxWidth: '1250px',
   height: '100%',
   gap: '20px',
-  backgroundColor: '#f0f0f0',
+  backgroundColor: theme.palette.background.paper,
   borderRadius: '8px',
-  overflow: 'hidden',
-  position: 'relative',
   cursor: 'pointer',
-  boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-  
+  boxShadow: theme.shadows[1],
   
   '&:hover': {
-    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+    boxShadow: theme.shadows[4],
   },
-
-  '@media (max-width: 900px)': {
-    flexDirection: 'column',
-    alignItems: 'center',
-    padding: '12px',
-    gap: '12px',
+[theme.breakpoints.down('lg')]: {
+    padding: '10px',
+    gap: '10px',
+    width: '700px',
   },
-
-  '@media (max-width: 600px)': {
-    padding: '8px',
+  [theme.breakpoints.down('md')]: {   
+     flexDirection: 'column', 
+    width: '500px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    width: '100%',
   },
 }));

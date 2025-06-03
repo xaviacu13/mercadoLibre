@@ -1,5 +1,5 @@
-import { Typography } from "@mui/material";
-import { Root } from "./styles";
+import { Divider, Typography } from "@mui/material";
+import { Root, BreadcrumbsText } from "./styles";
 import { useNavigate } from "react-router-dom";
 
 const NavigationBar = ({ publication }) => {
@@ -7,7 +7,7 @@ const NavigationBar = ({ publication }) => {
 
   return (
     <Root>
-      <div style={{ display: "flex", gap: "10px" }}>
+      <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
         <Typography
           variant="h6"
           color="text.link"
@@ -16,10 +16,13 @@ const NavigationBar = ({ publication }) => {
         >
           Volver al listado
         </Typography>
+        <Divider orientation="vertical" flexItem />
 
-        <Typography variant="h4">Detalle del producto</Typography>
+        <BreadcrumbsText variant="h3">
+          Celulares y Telefonos {">"} celulares y smartphones {">"} Apple iPhone
+        </BreadcrumbsText>
       </div>
-      <Typography variant="h5">
+      <Typography variant="h3">
         Publicación: <strong>{publication}</strong>
       </Typography>
     </Root>
